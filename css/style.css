@@ -184,8 +184,12 @@ a {
   table {
     border: 0;
   }
+  .invoice-table{
+    margin-bottom: 30px;
+  }
   .invoice-table tbody td{
     text-align: end;
+    padding: 15px 20px;
   }
   table thead {
     border: none;
