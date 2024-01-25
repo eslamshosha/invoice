@@ -139,6 +139,9 @@ a {
   text-align: start;
   padding: 15px 25px;
 }
+.table-head-sm{
+  display: none;
+}
 @media (max-width: 767px) {
   .nav-header {
     flex-wrap: wrap;
@@ -157,8 +160,9 @@ a {
   }
   .invoice-info {
     padding: 20px 0;
+    margin-bottom: 20px;
   }
-  .invoice-table table {
+  /* .invoice-table table {
     width: 847px;
   }
   .invoice-cont {
@@ -168,5 +172,57 @@ a {
   .invoice-table {
     overflow-x: auto;
     width: 100%;
+  } */
+  .table-head-sm{
+    display: none;
+    margin-bottom: 0px;
+    font-weight: 700;
+    color: var(--black-color);
+    text-align: start;
+    font-size: 24px;
+  }
+  table {
+    border: 0;
+  }
+  .invoice-table tbody td{
+    text-align: end;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: inline-start;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
   }
 }
