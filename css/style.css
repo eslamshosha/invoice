@@ -11,7 +11,7 @@ body {
 }
 :root {
   --main-color: #0a081c;
-  --main-hover: #f16122;
+  --main-hover: #4b5256;
   --sec-color: #999999;
   --black-color: #000000;
   --white-color: #ffffff;
@@ -43,6 +43,10 @@ a {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--main-hover);
+}
+/*page style*/
+.page-wrapper {
+  margin-bottom: 40px;
 }
 .nav-header {
   padding: 30px 0;
@@ -139,8 +143,55 @@ a {
   text-align: start;
   padding: 15px 25px;
 }
-.table-head-sm{
-  display: none;
+
+.btn-cont {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+}
+.print-btn {
+  padding: 0;
+  outline: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #b2b2b2;
+  background-color: #f2f2f2;
+  border: none;
+  padding: 0 25px;
+  height: 45px;
+  border-radius: 22px;
+  transition: all 0.3s ease-in-out;
+}
+.print-btn:hover {
+  background-color: #4b5256;
+  color: var(--white-color);
+}
+.pay-link {
+  padding: 0;
+  outline: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #4b5256;
+  color: var(--white-color);
+  border: none;
+  padding: 0 25px;
+  height: 45px;
+  border-radius: 22px;
+  transition: all 0.3s ease-in-out;
+}
+.pay-link:hover {
+  color: #b2b2b2;
+  background-color: #f2f2f2;
 }
 @media (max-width: 767px) {
   .nav-header {
@@ -152,6 +203,9 @@ a {
   .header-logo figure {
     max-width: 180px;
   }
+  .btn-cont {
+    justify-content: center;
+  }
   .invoice-id {
     width: 100%;
     text-align: center;
@@ -161,6 +215,7 @@ a {
   .invoice-info {
     padding: 20px 0;
     margin-bottom: 20px;
+    justify-content: center;
   }
   /* .invoice-table table {
     width: 847px;
@@ -173,7 +228,7 @@ a {
     overflow-x: auto;
     width: 100%;
   } */
-  .table-head-sm{
+  .table-head-sm {
     display: none;
     margin-bottom: 0px;
     font-weight: 700;
@@ -184,10 +239,10 @@ a {
   table {
     border: 0;
   }
-  .invoice-table{
+  .invoice-table {
     margin-bottom: 30px;
   }
-  .invoice-table tbody td{
+  .invoice-table tbody td {
     text-align: end;
     padding: 15px 20px;
   }
@@ -201,20 +256,20 @@ a {
     position: absolute;
     width: 1px;
   }
-  
+
   table tr {
     border-bottom: 3px solid #ddd;
     display: block;
-    margin-bottom: .625em;
+    margin-bottom: 0.625em;
   }
-  
+
   table td {
     border-bottom: 1px solid #ddd;
     display: block;
-    font-size: .8em;
+    font-size: 0.8em;
     text-align: right;
   }
-  
+
   table td::before {
     /*
     * aria-label has no advantage, it won't be read inside a table
@@ -225,7 +280,7 @@ a {
     font-weight: bold;
     text-transform: uppercase;
   }
-  
+
   table td:last-child {
     border-bottom: 0;
   }
